@@ -1,0 +1,5 @@
+<header class="header">
+  <p>{{ nomeEmpresa }}</p>
+  <input type="text" (input)="onEditText($event)"/>
+  <button [disabled]="!enabledButton">Pesquisar</button>
+</header>

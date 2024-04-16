@@ -1,0 +1,31 @@
+<section class="home">
+    <!-- <p>Olá, {{ name }}!</p> -->
+    <!-- <br>
+    <button [disabled]="!enabledButton">Botão {{ statusBotao }}</button>
+    <br>
+    <br>
+    <button (click)="onClickButton()">Botão Event Bind</button>
+    <br>
+    <br>
+    <input type="text" (input)="onEditText($event)">
+    <br>
+    <br>
+    <input type="text" (input)="onEditNgModel()" [(ngModel)]="randomText" > -->
+    <label for="title">Título</label>
+    <br>
+    <input type="text" id="title" [(ngModel)]="book.title">
+    <br>
+    <label for="author">Autor</label>
+    <br>
+    <input type="text" id="author" [(ngModel)]="book.author">
+    <br>
+    <label for="isbn">ISBN</label>
+    <br>
+    <input type="text" id="isbn" [(ngModel)]="book.isbn" disabled="true">
+    <br>
+    <label for="published">Ano Publicação</label>
+    <br>
+    <input type="datetime" id="published" [(ngModel)]="book.published">
+    <br>
+    <button (click)="onSave()">Salvar</button>
+</section>

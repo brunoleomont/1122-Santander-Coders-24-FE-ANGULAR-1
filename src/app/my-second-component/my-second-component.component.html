@@ -1,18 +1,22 @@
-<p [ngClass]="{ bgGreen: showSuccessMessage === true }">
-  Parágrafo de teste de diretivas
-</p>
+<section >
 
-<p [ngStyle]="{ backgroundColor: 'red' }">Este parágrafo é vermelho!</p>
-
-<p *ngIf="showSuccessMessage">Formulário preenchido com sucesso!</p>
-
-<div *ngFor="let item of items">
-  <p>Olá, {{ item }}!</p>
-</div>
-
-<div [ngSwitch]="value">
-  <p *ngSwitchCase="5">Valor é 5</p>
-  <p *ngSwitchCase="10">Valor é 10</p>
-  <p *ngSwitchCase="100">Valor é 100</p>
-  <p *ngSwitchDefault>Valor é default</p>
-</div>
+  <p [ngClass]="{ bgGreen: showSuccessMessage === true }">
+    Parágrafo de teste de diretivas
+  </p>
+  
+  <p [ngStyle]="{ backgroundColor: 'red' }">Este parágrafo é vermelho!</p>
+  
+  <p *ngIf="showSuccessMessage">Formulário preenchido com sucesso!</p>
+  
+  <div *ngFor="let item of items">
+    <p>Olá, {{ item }}!</p>
+  </div>
+  
+  <div [ngSwitch]="value">
+    <p *ngSwitchCase="5">Valor é 5</p>
+    <p *ngSwitchCase="10">Valor é 10</p>
+    <p *ngSwitchCase="100">Valor é 100</p>
+    <p *ngSwitchDefault>Valor é default</p>
+  </div>
+  
+</section>
