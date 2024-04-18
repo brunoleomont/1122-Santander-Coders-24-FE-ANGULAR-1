@@ -1,0 +1,13 @@
+<label for="studentName">Nome do estudante da {{ student }}</label>
+<br>
+<input type="text" #studentNameInput id="studentName">
+<br>
+<br>
+<button (click)="onAddStudent(studentNameInput)">Salvar</button>
+<br>
+<br>
+<div *ngFor="let student of arrayOfStudents">
+    <p>{{ student }}</p>
+</div>
+
+<ng-content></ng-content>

@@ -17,6 +17,11 @@ export class HomeComponent {
   enabledButton = true;
   statusBotao = 'Habilitado';
   randomText = 'Valor inicial';
+  formComplete = false;
+
+  ngOnInit() {
+    this.onEditNgModel();
+  }
 
   onClickButton() {
     this.enabledButton = !this.enabledButton;
@@ -26,11 +31,18 @@ export class HomeComponent {
   }
 
   onEditText(event: Event): void {
-    console.log((event.target as HTMLInputElement).value);
+    // console.log((event.target as HTMLInputElement).value);
+    (event.target as HTMLInputElement).value.length == 0 ?
+      this.formComplete = false : this.formComplete = true;
   }
 
   onEditNgModel(): void { 
-    console.log(this.randomText)
+    if (this.book.author.length == 0 || this.book.title.length == 0 ||
+      this.book.isbn.length == 0) {
+      this.formComplete = false;
+    } else {
+      this.formComplete = true;
+    }
   }
 
   onSave() : void {

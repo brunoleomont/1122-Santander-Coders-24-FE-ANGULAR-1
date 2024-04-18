@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { DataBindComponent } from './data-bind/data-bind.component';
+import { StudentsComponent } from './students/students.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DataBindComponent } from './data-bind/data-bind.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    DataBindComponent
+    DataBindComponent,
+    StudentsComponent
   ],
   // o array imports permite que outros módulos sejam importados no AppModule
   imports: [

@@ -2,3 +2,13 @@
     margin: auto;
     min-height: calc(100vh - 120px);
 }
+
+.bgGreen {
+    background-color: green;
+    color: white;
+}
+
+.bgRed {
+    background-color: red;
+    color: white;
+}

@@ -13,19 +13,38 @@
     <input type="text" (input)="onEditNgModel()" [(ngModel)]="randomText" > -->
     <label for="title">Título</label>
     <br>
-    <input type="text" id="title" [(ngModel)]="book.title">
+    <input type="text" id="title" [(ngModel)]="book.title"
+        (input)="onEditNgModel()">
     <br>
     <label for="author">Autor</label>
     <br>
-    <input type="text" id="author" [(ngModel)]="book.author">
+    <input type="text" id="author" [(ngModel)]="book.author"
+        (input)="onEditNgModel()">
     <br>
     <label for="isbn">ISBN</label>
     <br>
-    <input type="text" id="isbn" [(ngModel)]="book.isbn" disabled="true">
+    <input type="text" id="isbn" [(ngModel)]="book.isbn" disabled="true"
+        (input)="onEditNgModel()">
     <br>
     <label for="published">Ano Publicação</label>
     <br>
-    <input type="datetime" id="published" [(ngModel)]="book.published">
+    <input type="datetime" id="published" [(ngModel)]="book.published"
+        (input)="onEditNgModel()">
     <br>
-    <button (click)="onSave()">Salvar</button>
+    <button (click)="onSave()" [disabled]="!formComplete">Salvar</button>
+    <br>
+    <p [ngClass]="{bgGreen : formComplete === true}"
+        *ngIf="formComplete; else errorMessage">
+        Formulário Preenchido com Sucesso!
+    </p>
+    <ng-template #errorMessage>
+        <p [ngClass]="{bgRed: formComplete === false}">
+            Formulário incompleto!
+        </p>
+    </ng-template>
+</section>
+<section>
+    <app-students [student]="book.author">
+        <p>O status do botão do componente Home está {{ statusBotao }}</p>
+    </app-students>
 </section>
