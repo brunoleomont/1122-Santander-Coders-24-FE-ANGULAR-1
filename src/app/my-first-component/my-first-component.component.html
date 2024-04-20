@@ -3,3 +3,11 @@
     <input type="text">
     <button>Pesquisar</button>
 </div>
+
+<div>
+    <ul>
+        <h2>Componente Pai</h2>
+        <li *ngFor="let item of items">{{ item }}</li>
+    </ul>
+    <app-items-child (newItemEvent)="addItems($event)"></app-items-child>
+</div>

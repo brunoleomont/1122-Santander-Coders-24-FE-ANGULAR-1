@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class MyFirstComponentComponent {
 
+  items = ['item 1', 'item 2', 'item 3'];
+
+  addItems(newItem: string): void {
+    this.items.push(newItem);
+  }
+
 }

@@ -1,0 +1,4 @@
+<h2>Componente filho</h2>
+<label for="item-input">Add an item:</label>
+<input type="text" #newItem>
+<button type="button" (click)="addNewItem(newItem.value)">Add items to parent's list</button>
