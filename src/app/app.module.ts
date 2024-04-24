@@ -14,6 +14,8 @@ import { StudentsComponent } from './students/students.component';
 import { ItemsChildComponent } from './items-child/items-child.component';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     StudentsComponent,
     ItemsChildComponent,
     TemplateDrivenComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    NotFoundComponent,
+    UserComponent
   ],
   // o array imports permite que outros módulos sejam importados no AppModule
   imports: [

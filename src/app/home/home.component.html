@@ -1,4 +1,4 @@
-<section class="home">
+<!-- <section class="home"> -->
     <!-- <p>Olá, {{ name }}!</p> -->
     <!-- <br>
     <button [disabled]="!enabledButton">Botão {{ statusBotao }}</button>
@@ -11,7 +11,7 @@
     <br>
     <br>
     <input type="text" (input)="onEditNgModel()" [(ngModel)]="randomText" > -->
-    <label for="title">Título</label>
+    <!-- <label for="title">Título</label>
     <br>
     <input type="text" id="title" [(ngModel)]="book.title"
         (input)="onEditNgModel()">
@@ -47,4 +47,7 @@
     <app-students [student]="book.author">
         <p>O status do botão do componente Home está {{ statusBotao }}</p>
     </app-students>
+</section> -->
+<section class="home">
+    <router-outlet></router-outlet>
 </section>
