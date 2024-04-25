@@ -9,7 +9,7 @@ import { User } from '../models/user';
 })
 export class ReactiveFormsComponent {
   countries = ['US', 'BR', 'ES'];
-  user = new User('User 1', 'user@example.com', this.countries[1]);
+  user = new User('User 1', 'user@example.com', this.countries[1], 1000, 70);
 
   form!: FormGroup;
 

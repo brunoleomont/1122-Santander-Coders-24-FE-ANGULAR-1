@@ -2,12 +2,10 @@
   <p>{{ nomeEmpresa }}</p>
   <input type="text" (input)="onEditText($event)" />
   <button [disabled]="!enabledButton">Pesquisar</button>
-  <ul>
-    <li>
-      <a routerLink="/first-component">My First Component</a>
-    </li>
-    <li>
-      <a routerLink="/template-driven">Template Driven</a>
-    </li>
-  </ul>
+  <div class="center">  
+    <!-- <span><a routerLink="/first-component">My First Component</a></span> -->
+    <!-- <span><a routerLink="/template-driven">Template Driven</a></span> -->
+    <span><a routerLink="/user-create">Criar User</a></span>
+    <span><a routerLink="/users">Listar Users</a></span>
+</div>
 </header>

@@ -10,7 +10,7 @@ export class TemplateDrivenComponent {
 
   countries = ['US', 'BR', 'ES']
 
-  user = new User('User 1', 'user@example.com', this.countries[1]);
+  user = new User('User 1', 'user@example.com', this.countries[1], 1000, 70);
 
   onSubmit() {
     alert(JSON.stringify(this.user));

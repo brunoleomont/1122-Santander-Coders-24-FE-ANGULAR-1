@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,7 +16,14 @@ import { TemplateDrivenComponent } from './template-driven/template-driven.compo
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserComponent } from './user/user.component';
+import { GramasTransformPipe } from './gramas-transform.pipe';
 
+import ptBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserCreateComponent } from './user-create/user-create.component';
+
+registerLocaleData(ptBr);
 
 @NgModule({
   // declaração de todos os componentes, pipes, etc
@@ -33,7 +40,10 @@ import { UserComponent } from './user/user.component';
     TemplateDrivenComponent,
     ReactiveFormsComponent,
     NotFoundComponent,
-    UserComponent
+    UserComponent,
+    GramasTransformPipe,
+    UserDetailComponent,
+    UserCreateComponent
   ],
   // o array imports permite que outros módulos sejam importados no AppModule
   imports: [
@@ -42,7 +52,9 @@ import { UserComponent } from './user/user.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt' },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

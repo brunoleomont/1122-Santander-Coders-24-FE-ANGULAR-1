@@ -1,3 +1,8 @@
-<p> {{ user.username }} </p>
-<p> {{ user.email }} </p>
-<p> {{ user.country }} </p>
+<h2>Lista de usuários: </h2>
+
+<div *ngFor="let user of listUsers">
+    <p> Username: {{ user.username | uppercase }} </p>
+    <p> Email: {{ user.email }} </p>
+    <a routerLink='/user/{{user.username}}'>Detalhes</a>
+    <br>
+</div>
