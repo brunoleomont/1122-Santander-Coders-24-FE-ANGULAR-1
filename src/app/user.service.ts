@@ -11,7 +11,6 @@ export class UserService {
   constructor() { }
 
   setUser(user: User) {
-    // localStorage.setItem('user', JSON.stringify(user));
     let listUsers = new Array();
     if (this.getAllUsers() !== null) {
       listUsers = this.getAllUsers();
@@ -26,11 +25,22 @@ export class UserService {
 
   // TO-DO
   getUserByName(name: string): User {
-    return JSON.parse(this.localStorageService.getItem('users')!)
+    let listUsers = new Array();
+    if (this.getAllUsers() !== null) {
+      listUsers = this.getAllUsers();
+    }
+    return listUsers.find(
+      (u) => u.username === name
+    )!;
   }
 
   // TO-DO
-  removeUser() {
-    this.localStorageService.removeItem('users');
+  removeUser(name: string): void {
+    let listUsers = new Array();
+    if (this.getAllUsers() !== null) {
+      listUsers = this.getAllUsers();
+    }
+    let newList = listUsers.filter(u => u.username !== name);
+    this.localStorageService.setItem('users', JSON.stringify(newList));
   }
 }

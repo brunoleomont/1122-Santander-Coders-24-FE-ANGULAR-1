@@ -14,7 +14,12 @@ export class UserCreateComponent {
   countries = ['US', 'BR', 'ES']
 
   onSubmit() {
-    // alert(JSON.stringify(this.user));
     this.userService.setUser(this.user);
+    alert('User criado com sucesso!\n' + JSON.stringify(this.user));
+    this.user.username = '';
+    this.user.email = '';
+    this.user.country = '';
+    this.user.salary = 0;
+    this.user.weight = 0;
   }
 }

@@ -4,5 +4,6 @@
     <p> Username: {{ user.username | uppercase }} </p>
     <p> Email: {{ user.email }} </p>
     <a routerLink='/user/{{user.username}}'>Detalhes</a>
+    <a (click)='removeUser(user.username)'>Remover</a>
     <br>
 </div>

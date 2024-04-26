@@ -5,7 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class GramasTransformPipe implements PipeTransform {
 
-  transform(value: number): string {
+  transform(value: number | undefined): string {
+    if (value === undefined) {
+      return '0';
+    }
     if (value < 1000) {
       return value + ' (g)';
     } else {

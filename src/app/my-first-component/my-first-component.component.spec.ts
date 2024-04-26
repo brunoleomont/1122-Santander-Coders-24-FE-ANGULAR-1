@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MyFirstComponentComponent } from './my-first-component.component';
+import { ItemsChildComponent } from '../items-child/items-child.component';
 
 describe('MyFirstComponentComponent', () => {
   let component: MyFirstComponentComponent;
@@ -8,7 +9,7 @@ describe('MyFirstComponentComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [MyFirstComponentComponent]
+      declarations: [MyFirstComponentComponent, ItemsChildComponent]
     });
     fixture = TestBed.createComponent(MyFirstComponentComponent);
     component = fixture.componentInstance;

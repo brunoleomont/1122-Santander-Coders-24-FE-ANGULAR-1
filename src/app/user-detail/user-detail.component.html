@@ -1,6 +1,6 @@
-<h2>Detalhes do usuário: </h2>
-<p> Username: {{ user!.username | uppercase }} </p>
-<p> Email: {{ user!.email }} </p>
-<p> Nacionalidade: {{ user!.country }} </p>
-<p> Salário: {{ user!.salary| currency: 'BRL' : 'symbol' : '4.2-2' }} </p>
-<p> Peso: {{ user!.weight| gramasTransform }} </p>
+<h2>Detalhes do usuário:</h2>
+<p> Username: {{ user?.username | uppercase }} </p>
+<p> Email: {{ user?.email }} </p>
+<p> Nacionalidade: {{ user?.country }} </p>
+<p> Salário: {{ user?.salary| currency: 'BRL' : 'symbol' : '4.2-2' }} </p>
+<p> Peso: {{ user?.weight | gramasTransform }} </p>

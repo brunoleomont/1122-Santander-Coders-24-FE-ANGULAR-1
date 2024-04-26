@@ -17,4 +17,9 @@ export class UserComponent {
   ngOnInit() {
     this.listUsers = this.userService.getAllUsers();
   }
+
+  removeUser(name: string) {
+    this.userService.removeUser(name);
+    this.listUsers = this.userService.getAllUsers();
+  }
 }
