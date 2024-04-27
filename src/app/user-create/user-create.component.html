@@ -1,22 +1,24 @@
 <h2>Formulários Create User</h2>
 <form (ngSubmit)="onSubmit()">
   <div class="form-group">
-    <label for="username">Username</label>
-    <input
-      class="form-control"
-      [(ngModel)]="user.username"
-      id="username"
-      name="username"
-      required
-      minlength="3"
-      #username="ngModel"
-    />
-    <div *ngIf="username.invalid" class="alert">
-      <div *ngIf="username.errors?.['required']">Username é obrigatório</div>
-      <div *ngIf="username.errors?.['minlength']">
-        Username deve ter no mínimo 3 caracteres
-      </div>
-    </div>
+    <mat-form-field>
+      <mat-label for="username">Username</mat-label>
+      <input
+        matInput
+        [(ngModel)]="user.username"
+        id="username"
+        name="username"
+        required
+        minlength="3"
+        #username="ngModel"
+      />
+    </mat-form-field>
+    <mat-error *ngIf="username.errors?.['minlength']">
+      Username deve ter no mínimo 3 caracteres
+    </mat-error>
+    <mat-error *ngIf="username.errors?.['required']">
+      Username é <strong>obrigatório</strong>
+    </mat-error>
   </div>
   <div class="form-group">
     <label for="email">Email</label>
@@ -62,5 +64,5 @@
       name="weight"
     />
   </div>
-  <button type="submit">Salvar User</button>
+  <button mat-flat-button color="primary" type="submit">Salvar</button>
 </form>

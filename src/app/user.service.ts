@@ -42,5 +42,6 @@ export class UserService {
     }
     let newList = listUsers.filter(u => u.username !== name);
     this.localStorageService.setItem('users', JSON.stringify(newList));
+    alert('User removido com sucesso!');
   }
 }

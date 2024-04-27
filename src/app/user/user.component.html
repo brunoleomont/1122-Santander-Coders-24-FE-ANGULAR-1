@@ -1,9 +1,17 @@
-<h2>Lista de usuários: </h2>
+<h2>Lista de usuários:</h2>
 
 <div *ngFor="let user of listUsers">
-    <p> Username: {{ user.username | uppercase }} </p>
-    <p> Email: {{ user.email }} </p>
-    <a routerLink='/user/{{user.username}}'>Detalhes</a>
-    <a (click)='removeUser(user.username)'>Remover</a>
-    <br>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Username: {{ user.username | uppercase }}</mat-card-title>
+      <mat-card-subtitle>Email: {{ user.email }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions>
+      <button mat-stroked-button color="primary" routerLink="/user/{{ user.username }}">
+        Detalhes
+      </button>
+      <button mat-stroked-button color="warn" (click)="removeUser(user.username)">Remover</button>
+    </mat-card-actions>
+  </mat-card>
+  <br>
 </div>

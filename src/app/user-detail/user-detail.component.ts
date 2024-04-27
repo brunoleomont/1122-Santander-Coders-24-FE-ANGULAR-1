@@ -15,15 +15,6 @@ export class UserDetailComponent {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    // this.user = new User(
-    //   this.route.snapshot.params['name'],
-    //   this.route.snapshot.params['email'],
-    //   this.route.snapshot.params['country']
-    // );
-    // this.user = this.listUsers.find(
-    //   (u) => u.username === this.route.snapshot.params['name']
-    // )!;
     this.user = this.userService.getUserByName(this.route.snapshot.params['name'])
   }
-
 }
